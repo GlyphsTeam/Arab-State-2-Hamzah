@@ -1,0 +1,316 @@
+
+.mainJobCard {
+  max-height: 320px;
+  padding: 22px 2% 5px !important;
+  max-width: 475px !important;
+  min-width: 302px !important;
+  // overflow: hidden;
+
+  .jobCardBody {
+    padding: 0;
+    border-radius: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-height: 270px;
+    // overflow: hidden;
+    background: var(--primary-color);
+    transition: all 0.8s ease;
+    &:hover {
+      .imgMainDiv {
+        background-color: transparent !important;
+      }
+    }
+    &:hover {
+      .jobImage {
+        transition: all 0.8s ease;
+        filter: brightness(50%);
+        transform: scale(1.3);
+        z-index: 1;
+      }
+    }
+
+    &:hover {
+      background-color: var(--white);
+      border: 2px solid var(--secondary2-color);
+    }
+    &:hover {
+      h3 {
+        color: var(--primary-color);
+      }
+    }
+    &:hover {
+      .jobInfo {
+        .userJob {
+          color: var(--primary-color);
+        }
+      }
+    }
+    &:hover {
+      .jobLocation {
+        color: var(--secondary2-color);
+      }
+    }
+    &:hover {
+      .jobDescription {
+        color: var(--primary-color);
+      }
+    }
+
+    &:hover {
+      .jobUserName {
+        p {
+          color: var(--secondary2-color);
+        }
+      }
+    }
+
+    &:hover {
+      .jobType {
+        color: var(--secondary2-color) !important;
+      }
+    }
+    &:hover {
+      .jobCreate {
+        color: var(--secondary2-color) !important;
+      }
+    }
+    &:hover {
+      .favIconColor {
+        color: var(--secondary2-color) !important;
+      }
+    }
+    .arImgMainDiv {
+      background: var(--white);
+      border-bottom-left-radius: 50% !important;
+    }
+    .imgMainDiv {
+      background: var(--white);
+      border-bottom-right-radius: 50%;
+
+      .jobImage {
+        max-width: 90px;
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+      }
+
+      .enJobImg {
+        border-radius: 50%;
+        width: 128px;
+        height: 93px;
+        position: relative;
+        bottom: 10px;
+        border: 2px solid var(--primary-color);
+      }
+
+      .arJobImg {
+        // padding: 0 0px 8px 0px !important;
+        // border-bottom-left-radius: 30px !important;
+        border-radius: 50%;
+        width: 128px;
+        height: 93px;
+
+        position: relative;
+        bottom: 10px;
+        border: 2px solid var(--primary-color);
+      }
+    }
+
+    .jobTitle {
+      font-size: 18px;
+      margin: 15px 0 5px;
+      overflow: hidden;
+      height: 24px;
+      color: $white;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+
+    .jobLocation {
+      font-size: 15px;
+      overflow: hidden;
+      height: 23px;
+      color: var(--white);
+      margin: 0;
+    }
+
+    .actionDiv {
+      display: flex;
+      justify-content: end;
+      padding: 10px 25px 10px 20px;
+      height: 53px;
+      align-items: center;
+
+      i {
+        cursor: pointer;
+        margin: 0 5px;
+      }
+
+      .favIconColor {
+        color: var(--primary-button-font-color);
+      }
+    }
+
+    .jobInfo {
+      .userJob {
+        color: $white;
+      }
+      .jobUserName {
+        color: var(--primary-button-font-color);
+        font-size: 17px;
+        padding: 6px 10px 0;
+        margin: 0;
+        height: 40px;
+        P {
+          display: inline-block;
+        }
+      }
+    }
+
+    .jobDescription {
+      margin: 0;
+      padding: 5px 12px 20px;
+      text-align: start;
+      overflow: hidden;
+      height: 78px;
+      text-overflow: ellipsis;
+      // white-space: nowrap;
+      color: var(--white);
+    }
+
+    .jobCardFooter {
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      .jobType {
+        color: var(--primary-button-font-color);
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .jobCreate {
+        color: var(--primary-button-font-color);
+        font-weight: 400;
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .approvalDiv {
+        display: flex;
+
+        .waitingApproval {
+          color: #cf1e50;
+        }
+        .published {
+          color: #0a4422;
+        }
+        .deleteIcon {
+          color: #cf1e50;
+          padding: 0 12px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.filterResult {
+  color: #0a4422;
+  border: 2px solid #0a4422 !important;
+  width: fit-content !important;
+  text-align: center;
+  padding: 10px 18px !important;
+  margin: 15px 5px 10px !important;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+
+  i {
+    position: absolute;
+    font-size: 14px;
+    top: 3px;
+    cursor: pointer;
+  }
+}
+.latestPostTitle {
+  font-size: 30px;
+  color: var(--primary-color);
+  padding: 72px 60px 0px !important;
+  font-weight: bold;
+}
+
+.minWidth {
+  min-width: 50% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mainJobCard {
+    max-width: 325px !important;
+    min-width: 220px;
+    margin: auto;
+
+    .jobCardBody {
+      .imgMainDiv {
+        .arJobImg {
+          width: 63px !important;
+          height: 63px !important;
+          padding: 0px !important;
+          border-radius: 50%;
+
+          bottom: 7px;
+          position: relative;
+          right: -3px !important;
+        }
+        .jobImage {
+          width: 63px !important;
+          height: 63px !important;
+          padding: 0px !important;
+          border-radius: 50%;
+
+          bottom: 7px;
+          position: relative;
+          right: 3px;
+        }
+      }
+    }
+
+    &:hover {
+      .jobLocation {
+        color: var(--secondary2-color) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .mainJobCard {
+    max-width: 300px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1444px) {
+  .jobImage {
+    width: 81px !important;
+    height: 79px !important;
+    padding: 0px !important;
+    // border-radius: 50%;
+
+    // bottom: 7px;
+    // position: relative;
+    // right: 3px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .jobImage {
+    width: 67px !important;
+    height: 68px !important;
+  }
+  .arJobImg {
+    position: relative;
+    right: -7px;
+  }
+}

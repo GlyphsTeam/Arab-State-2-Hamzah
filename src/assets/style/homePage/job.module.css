@@ -1,0 +1,341 @@
+.jobContainer {
+  padding: 30px;
+  /* background-image: url("../../Images/home/jobBackground.png"); */
+  background-size: cover;
+  width: 100%;
+}
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.littleTitle {
+  padding: 15px 0 0;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 17px;
+}
+.mainTitle {
+  margin: 0 0 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.mainJobDiv {
+  padding-top: 15px;
+}
+.jobCard {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background: var(--box-color);
+  padding: 27px 35px 20px;
+  border-radius: 80px 0;
+  max-height: 550px;
+  min-height: 300px;
+  border: 2px solid var(--primary-color);
+}
+
+.jobDivTitle {
+  /* transform: translate(70%, -20px); */
+  background: var(--secondary-color);
+  border-radius: 15px;
+  position: absolute;
+  right: -17px;
+    top: -20px;
+  /* transform: translate(70%, -24px); */
+}
+
+.colCenter {
+  display: flex;
+  justify-content: center;
+  max-width: 500px !important;
+  margin: 30px auto;
+  position: relative;
+}
+.cardTitle {
+  text-align: center;
+  font-weight: 700;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 27px;
+  color: var(--white);
+  padding: 5px 15px;
+  /* border-radius: 25px; */
+  margin: 10px;
+  min-height: 40px;
+  max-width: 160px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cardText {
+  text-align: center;
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 23px;
+  /* background: var(--tertiary-color); */
+  color: var(--secondary-color);
+  padding: 9px 15px;
+  border-radius: 25px;
+  margin: 10px auto;
+  max-width: 220px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+.cardParagraph {
+  text-align: center;
+  font-size: 16px;
+  margin: 15px 0;
+  height: 101px;
+  color: var(--primary-color);
+  overflow: hidden;
+  min-height: 101px;
+  width: 275px;
+}
+.navLink {
+  text-decoration: none;
+  position: relative;
+
+}
+.jobSectionImg {
+  height: 250px;
+  width: 280px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.jobCard:hover img {
+  filter: brightness(0.5);
+  transition: 500ms;
+}
+.jobCard:hover .jobDivTitle {
+  transition: 500ms;
+  transform: translate(50%, 170px);
+  background: transparent;
+  border-radius: 15px;
+  z-index: 1;
+  right: 50%;
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .colCenter {
+    scale: 0.7;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .colCenter {
+    max-width: 100% !important;
+    width: 90% !important;
+    margin: 35px 0;
+  }
+
+  .mainJobDiv {
+    flex-direction: column;
+  }
+
+  .mainJobDiv {
+    max-width: 100% !important;
+    width: 90% !important;
+    margin: auto !important;
+  }
+
+  .navLink {
+    width: 100%;
+  }
+
+  /* .jobCard {
+    flex-direction: row-reverse;
+  } */
+
+  /* .jobDivTitle {
+    transform: translate(28%, -136px);
+    z-index: 1;
+    width: 250px;
+  } */
+
+  .jobSectionImg {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 20px 0;
+  }
+
+  .cardParagraph{
+    padding: 0 15px;
+  }
+
+  /* .descriptionParagraphDiv {
+    transform: translate(40%, 0);
+  } */
+}
+
+@media screen and (max-width: 800px) {
+  .navLink {
+    width: 100% !important;
+  }
+  .littleTitle {
+    font-size: 12px;
+  }
+  .cardParagraph {
+    width: 200px;
+  }
+
+  .mainTitle {
+    margin: 0 0 2rem;
+    font-size: 21px;
+  }
+  .jobContainer {
+    padding: 50px 20px;
+  }
+  .jobContainer h1 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .colCenter {
+    width: 70% !important;
+    margin: 25px auto;
+  }
+  .jobSectionImg {
+    /* width: 154px;
+    height: 99px; */
+  }
+  /* .jobSectionImg {
+    transform: translate(68%, 0);
+    width: 50%;
+  } */
+
+  /* .descriptionParagraphDiv {
+    transform: translate(60%, 0);
+  } */
+
+  .mainJobDiv {
+    padding-top: 0px;
+    margin: auto;
+  }
+  .cardText {
+    font-size: 16px;
+  }
+  .jobCard {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 635px) {
+  .navLink {
+    width: 60% !important;
+  }
+  /* .jobSectionImg {
+    transform: translate(77%, 0);
+    width: 50%;
+  } */
+
+  /* .descriptionParagraphDiv {
+    transform: translate(75%, 0);
+  } */
+  .jobSectionImg {
+    height: 180px;
+  }
+}
+@media (max-width: 550px) {
+  .jobSectionImg {
+    /* transform: translate(90%, 0); */
+    width: 60%;
+  }
+
+  /* .descriptionParagraphDiv {
+    transform: translate(68%, 0);
+  } */
+
+  .jobSectionImg {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .colCenter {
+    width: 100% !important;
+    margin: 20px auto;
+  }
+  .navLink {
+    width: 90% !important;
+  }
+  .jobCard {
+    flex-direction: column;
+  }
+  /* .jobDivTitle {
+    transform: translate(70%, -27px);
+    z-index: 1;
+  } */
+  .jobSectionImg {
+    /* transform: translate(0%, 0); */
+    width: 70%;
+    height: 194px;
+  }
+
+  .descriptionParagraphDiv {
+    transform: translate(0%, 0);
+  }
+  .cardTitle {
+    min-height: 33px;
+    font-size: 20px;
+    margin: 0px;
+  }
+  .jobCard {
+    min-height: 275px;
+  }
+  .cardParagraph {
+    width: 170px;
+    height: 48px;
+    overflow: hidden;
+    font-size: 12px;
+    margin: 3px 0;
+  }
+  .cardText {
+    border-radius: 25px;
+    max-width: 112px;
+    font-size: 12px;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  }
+}
+
+@media (max-width: 400px) {
+  .cardParagraph {
+    width: 220px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .jobCard {
+    padding: 32px 31px;
+  }
+  .jobContainer h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .jobSectionImg {
+    /* height: 110px;
+    width: 200px;  */
+  }
+}
+
+@media (min-width: 280px) and (max-width: 357px) {
+  /* .jobSectionImg{
+  width: 115px;
+  height: 70px;
+} */
+  .jobCard {
+    padding: 8px 2px;
+  }
+}

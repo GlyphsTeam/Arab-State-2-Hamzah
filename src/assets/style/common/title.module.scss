@@ -1,0 +1,20 @@
+
+.title {
+  color: var(--secondary2-color);
+  font-weight: bold;
+  font-size: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px){
+    .title {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,31 @@
+
+@import "./_App.module.scss";
+
+.stateTitle {
+  font-size: 50px;
+  font-weight: 700;
+  padding: 0 99px;
+  color: $primary-color;
+}
+
+.stateDiv{
+    padding-top: 76px;
+    margin-bottom: 69px;
+}
+
+.cardsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 480px) {
+    .stateTitle {
+        font-size: 25px;
+      }
+      .cardsContainer{
+        flex-direction: column;
+        align-items:center;
+      }
+}

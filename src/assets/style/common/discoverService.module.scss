@@ -1,0 +1,102 @@
+
+.discoverServiceContainer {
+  position: relative;
+}
+.discoverServiceImageContainer {
+  padding: 15px;
+  height: 430px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 79px;
+  filter: brightness(50%);
+  color:var(--white);
+}
+
+.discoverServiceText {
+  position: absolute;
+  top: 43px;
+  color: var(--white);
+  padding: 22px 96px;
+  h5 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  P {
+    text-wrap: balance;
+    padding-top: 38px;
+    height: 162px;
+    overflow: hidden;
+    max-width: 708px;
+    font-size: 22px;
+  }
+}
+.discoverServiceButton {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  margin-top: 22px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  // border: 3px solid var(--tertiary-color);
+  transition: all 1.04s ease;
+  // width: 57%;
+  width: 50%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.discoverServiceButton {
+  &:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-button-font-color);
+  }
+}
+
+.discoverServiceButtonAr {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  margin-top: 22px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 3px solid var(--tertiary-color);
+  transition: all 1.04s ease;
+  width: 50%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.discoverServiceButtonAr {
+  &:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+  }
+}
+
+@media (max-width: 480px) {
+  .discoverServiceText {
+    font-size: 15px;
+  }
+
+  .discoverServiceText {
+    padding: 22px 21px;
+    h5{
+      font-size: 30px;
+
+    }
+    p{
+      font-size: 20px;
+
+    }
+   }
+  .discoverServiceButton {
+    width: 73%;
+    margin: 32px auto
+  }
+  .discoverServiceImageContainer{
+    font-size: 21px;
+    margin-top: 38px;
+  }
+}

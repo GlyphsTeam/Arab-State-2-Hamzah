@@ -1,0 +1,82 @@
+.categoryNav{
+    background: var(--tertiary-color);
+    color: var(--primary-button-font-color );
+    font-weight: 700;
+    padding: 25px 4%;
+    margin-top: -60px;
+    position: relative;
+}
+
+.mobileCategoryNav{
+    position: fixed;
+    background: var(--white);
+    color: var(--white);
+    font-weight: 700;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+    overflow: auto;
+}
+
+.categoryUl{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.mobileCategoryUl{
+    margin: 0px;
+    padding: 20px 10%;
+    list-style-type: none;
+
+}
+
+.accordionDiv{
+    margin: 0 0 10px;
+}
+
+.categoryLi{
+    margin: 0 25px;
+    padding: 0;
+    cursor: pointer;
+    
+}
+
+.dropDownUl{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--black);
+    width: 140px;
+    z-index: 3;
+    padding: 5px 10px;
+    color: var(--primary-color);
+    list-style-type: none;
+
+}
+
+.activeFilter {
+    color: var(--primary-color);
+  }
+  .activeFilterSub{
+    color: var(--tertiary-color);
+  }
+.categoryLi p{
+    margin: 0;
+    padding: 0;
+}
+
+.mobileHeadCategory{
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeMobileCategory{
+    color: var(--primary-color);
+    font-size: 30px;
+    margin: 0;
+    align-self: center;
+}

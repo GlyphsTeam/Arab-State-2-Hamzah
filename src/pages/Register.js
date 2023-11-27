@@ -1,0 +1,20 @@
+import React, { useState } from 'react';
+import RegisterPage from '../components/login_register/Regester';
+import Email from '../components/login_register/Email';
+import OTP from '../components/login_register/OTP';
+
+function Register({baseURL, logo}) {
+    const [showEmail, setShowEmail] = useState(true);
+    const [showOtp, setShowOtp] = useState(false);
+    const [showRegister, setShowRegister] = useState(false);
+
+  return (
+    <>
+    {showEmail && (<Email baseURL = {baseURL} setShowEmail={setShowEmail} setShowOtp = {setShowOtp} logo = {logo}/>)}
+    {showOtp && (<OTP baseURL = {baseURL}  setShowEmail={setShowEmail} setShowOtp = {setShowOtp} setShowRegister = {setShowRegister} logo = {logo} />)}
+    {showRegister && (<RegisterPage baseURL = {baseURL} setShowRegister = {setShowRegister} logo = {logo}/>)}
+    </>
+    )
+}
+
+export default Register

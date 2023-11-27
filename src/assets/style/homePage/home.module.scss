@@ -1,0 +1,30 @@
+
+.smallTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--secondary2-color);
+
+}
+
+.mainTitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.homeState{
+    text-align: center;
+    padding-top: 113px;
+}
+
+
+@media (max-width: 480px) {
+    .mainTitle{
+        font-size: 30px;
+
+    }
+    .smallTitle{
+        font-size: 22px;
+
+    }
+}
