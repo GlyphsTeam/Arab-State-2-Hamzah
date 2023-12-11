@@ -13,7 +13,6 @@ function Home({ baseURL }) {
   const url = `home`;
   const [Data] = useAxios(url);
   const homeData = Data?.data;
-  console.log("homeDate>>>4",homeData)
   return (
     <>
     <Helmet>
