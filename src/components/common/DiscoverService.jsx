@@ -17,7 +17,7 @@ const DiscoverService = ({ data }) => {
       <div className={style.discoverServiceText}>
         <h5>{data?.title}</h5>
         <p>{data?.web_description && ReactHtmlParser(data?.web_description)}</p>
-        <Link to={data?.link}>
+        <Link to={process.env.REACT_APP_ABOUT_URL}>
           <div className={i18n.language === "en" ? style.discoverServiceButton: style.discoverServiceButtonAr }>{t("Start Your Journey")}</div>
         </Link>
       </div>

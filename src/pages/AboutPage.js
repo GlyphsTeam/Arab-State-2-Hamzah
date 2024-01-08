@@ -6,6 +6,7 @@ import UserAnalytics from "../components/aboutUs/UserAnalytics";
 import HeroBanner from "../components/common/banner/HeroBanner";
 import PlacesToVisitSection from "../components/blog/PlacesToVisitSection";
 import { Helmet } from "react-helmet";
+import DiscoverService from "../components/common/DiscoverService";
 function AboutPage() {
 
   const url = `about`;
@@ -27,6 +28,7 @@ function AboutPage() {
           </div>
         </div>
         <UserAnalytics aboutData={aboutData?.statistics} />
+        <DiscoverService data={aboutData?.our_services}/>
         <div className="px-5">
           <PlacesToVisitSection data={aboutData?.blogs}/>
         </div>
