@@ -10,6 +10,7 @@ import {  useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useAxios from "../../../hooks/useAxiosGet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Advertusments from "../../Advertusment/Advertusments";
 function NavBar({ logoImage }) {
   const [showNavbar, setShowNavbar] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -139,6 +140,7 @@ function NavBar({ logoImage }) {
 
   return (
     <>
+    <Advertusments/>
       {!hideNavbar && (
         <header
        className={`${nav === "one" ? style.headerContainer : style.headerContainer2
