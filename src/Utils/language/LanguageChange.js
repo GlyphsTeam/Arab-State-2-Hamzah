@@ -43,7 +43,6 @@ export default function LanguageChange() {
              localLang === 'ar'
           ? changeLang('ar')
           : changeLang('en');
-          console.log(localLang);
       }, [location]);
 
     return null;

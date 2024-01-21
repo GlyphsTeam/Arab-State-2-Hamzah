@@ -26,7 +26,6 @@ function JobCard({jobData, isMyPost, baseUrl  ,urlId, page}) {
 
     const handleClick = () => {
       setShowShareModal(true);
-      console.log(setShowShareModal);
     };
   
 

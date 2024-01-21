@@ -33,7 +33,6 @@ function LanguageGet() {
                  localLang === 'ar'
               ? changeLang('ar')
               : changeLang('en');
-              console.log(localLang);
           }, [location]);
 
           const changeLang = (newLang) =>{

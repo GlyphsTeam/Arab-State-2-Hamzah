@@ -8,7 +8,6 @@ function Advertusments() {
     const [t] = useTranslation();
     const location = useLocation();
     const [adverShow, setAdverShow] = useState(true);
-    console.log("location",location)
     useEffect(()=>{
         if(location.pathname==="/add-bussinse"){
             setAdverShow(false)
