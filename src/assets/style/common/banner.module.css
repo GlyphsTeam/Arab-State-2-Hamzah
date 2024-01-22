@@ -9,11 +9,12 @@
   filter: brightness(0.5);
 }
 .categoryImage{
-  width: 100%;
-  margin-left: -25px;
+  width: 102% !important ;
+  margin-left: -10px;
 }
 .categoryImageAR{
-  margin-right: -20px;
+  width: 102% !important;
+  margin-right: -10px;
 }
 .categoryContainerDivAbout img {
   object-fit: cover;

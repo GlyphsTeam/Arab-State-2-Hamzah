@@ -35,12 +35,10 @@ const ForgetPassword = ({ baseURL, setShowForgetPass, setShowForgetOtp, logo }) 
         const response = await fetch(`${baseURL}/send-email`, { method: "POST", body: formData })
         const error = await response.json();
         if (error.status === false && error.status_number === 'S400' && error.errors.email) {
-            // alert(error.errors.email[0]);
             setErrorMessage(error.errors.email[0]);
             setShowEmailWarn(true);
             setUserEmail('');
         } else if (response.ok) {
-            // setShowModalRegester(true);
             setShowForgetOtp(true);
             setShowForgetPass(false);
             localStorage.setItem('arab_user_email', userEmail)

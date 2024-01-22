@@ -3,6 +3,7 @@ import style from "../../assets/style/contactUs.module.css";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import Alert from "../customAlert/Alert";
+import ButtonSeven from "../Buttons/ButtonSeven";
 function RightContact({baseURL}) {
   const [t] = useTranslation();
   const [show, setShow] = useState(false);
@@ -121,13 +122,13 @@ function RightContact({baseURL}) {
             </p>
           )}
           <div className="row">
-            <button
-              className={`mt-4 btn rounded-10 w-10 ${style.reachoutBtn}`}
-              type="submit"
-              onClick={handleClick}
+            <ButtonSeven
+              // className={`mt-4 btn rounded-10 w-10 ${style.reachoutBtn}`}
+              buttonType="submit"
+              handlerClick={handleClick}
             >
               {t("Send")}
-            </button>
+            </ButtonSeven>
           </div>
         </form>
       </div>

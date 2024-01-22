@@ -11,7 +11,7 @@ const TryApp = lazy(() => import("../components/home/tryApp/TryApp"));
 const EasySearch = lazy(() => import("../components/common/EasySearch"));
 const AllCategoryList = lazy(() => import("../components/home/category/AllCategoryList"));
 const CitySection = lazy(() => import("../components/multiCityComponent/citySection/CityList"));
-const BannerWInfo = lazy(() => import(("../components/common/banner/BannerWInfo")));
+const BannerWInfo = lazy(() => import("../components/common/banner/BannerWInfo"));
 const SpinnerStatic = lazy(() => import("../components/common/Spinner"));
 
 function Home() {

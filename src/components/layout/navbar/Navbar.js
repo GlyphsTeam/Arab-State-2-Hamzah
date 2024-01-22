@@ -68,38 +68,7 @@ function NavBar({ logoImage }) {
   }, [pathName]);
 
 
-  //   useEffect(() => {
-  //     setLang(localStorage.getItem('lang'));
-  //     }, [localStorage.getItem('lang')]);
 
-  // const { pathname } = location;
-
-  // useEffect(() => {
-  //   const { pathname } = location;
-  //   const params = pathname.split('/');
-  //   const lang = params[1];
-
-  //   if(lang === 'ar' || lang === 'en'){
-  //     urlChangeLang(lang);
-  //   }else{
-
-  //     urlChangeLanguageDefault();
-  //   }
-  // }, [pathname]);
-
-  // const urlChangeLanguageDefault = () => {
-  //   const { pathname } = location;
-  //   const params = pathname.split('/');
-  //   const lang = localStorage.getItem("lang");
-  //   if(lang === 'ar' || lang === 'en'){
-  //     console.log('have lang local');
-  //     urlChangeLang(lang, 'defaultPath')
-  //   }else{
-  //     urlChangeLang('en')
-  //     console.log('no lang local');
-  //   }
-
-  // };
 
   const urlChangeLang = (lang, type) => {
     const { pathname } = location;

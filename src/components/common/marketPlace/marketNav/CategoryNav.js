@@ -138,7 +138,6 @@ function CategoryNav({ categoryState, setCategoryState, setOpenMobileCategory, o
             {Data?.data?.main?.map((item, index) => (
               <div key={index}>
 
-                {/* <Accordion index={index} title={item.name} id = {item.id} subData= {item.categories} filerAction = {filterActionCategory} mobileFilerAction = {mobileFilterActionCategory} categoryState = {categoryState} setCategoryState = {setCategoryState}/>  */}
 
                 <CategoryNavDropDown index={index} title={item.name} id={item.id} subData={item.categories} filerAction={filterActionCategory} mobileFilerAction={mobileFilterActionCategory} categoryState={categoryState} setCategoryState={setCategoryState} />
 

@@ -62,7 +62,6 @@ const hendelRegester = async(e) =>{
         
     if(subscribe === true){
         handleSendAdsEmail(userEmail);
-        // console.log('sendAdsEmail');
     }
     const response = await fetch(`${baseURL}/register`,{
         method:"POST",

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ResponiveSlider from "../Slider/ResponiveSlider";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import ButtonThree from "../Buttons/ButtonThree";
 function PlacesToVisitSection({urlId , data}) {
   const [t, i18n] = useTranslation();
   const latest_post = data?.model;
@@ -57,7 +58,9 @@ function PlacesToVisitSection({urlId , data}) {
                     >
                       <div className={style.readMoreContainer}>
                         <small className={style.readMoreText}>
+                          <ButtonThree>
                           {t("Read More")}
+                          </ButtonThree>
                         </small>
                       </div>
                     </Link>

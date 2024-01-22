@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import style from "../../../assets/style/layout/footer.module.scss";
 import UseFetchPost from "../../../hooks/useFetch";
 import { useTranslation } from "react-i18next";
+import ButtonSeven from "../../Buttons/ButtonSeven";
 function SubscribeFooter() {
   let url = `subscribes`;
 
@@ -26,11 +27,9 @@ function SubscribeFooter() {
     }
   };
   const handleSubscribe = (event) => {
-    // event.preventDefault();
-    // setIsValidEmail(regex.test(email));
+    
     setShowEmailWarning(false);
     if (regex.test(email)) {
-      // console.log(...formData.entries());
       setSend(true);
       setIsSubscribed(true);
       setTimeout(() => {
@@ -60,11 +59,12 @@ function SubscribeFooter() {
           <p className={style.warnEmail}>{t("Email is not valid")}</p>
         )}
         <div className={style.subscribeBtn}>
-          <button
-            className={`${style.subscribeButton} ${
-              isSubscribed ? style.subscribed : ""
-            }`}
-            onClick={handleSubscribe}
+          <ButtonSeven
+            // className={`${style.subscribeButton} ${
+            //   isSubscribed ? style.subscribed : ""
+            // }`}
+            handlerClick={handleSubscribe}
+            buttonType="submit"
           >
             {isSubscribed ? (
               <>
@@ -74,7 +74,7 @@ function SubscribeFooter() {
             ) : (
               t("subscribe")
             )}
-          </button>
+          </ButtonSeven>
         </div>
       </div>
     </div>

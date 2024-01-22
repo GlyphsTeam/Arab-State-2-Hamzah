@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ReactHtmlParser from "html-react-parser";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import ButtonThree from "../../Buttons/ButtonThree";
 function AboutUs({ data }) {
   const [t] = useTranslation();
   return (
@@ -17,11 +18,9 @@ function AboutUs({ data }) {
           {/* <p>{data?.description}</p> */}
           <div className={style.aboutUsBtnDiv}>
             <Link to={"/About"}>
-              {/* <button btnInfo="Read More" className={style.btnWidth} > Read More</button> */}
-              <button className={style.button} role="button">
-                {" "}
+              <ButtonThree>
                 {t("Read More")}
-              </button>
+              </ButtonThree>
             </Link>
           </div>
         </div>

@@ -19,18 +19,15 @@ function CategoryNavDropDown({
     } else {
       setDropdownOpen(id);
     }
-    // console.log("enter");
   };
 
   const handleMouseLeave = () => {
     setDropdownOpen();
-    // console.log("leave");
   };
 
   useEffect(() => {
     if (window.innerWidth < 1200) {
       setIsMobile(true);
-      // console.log('mobile');
       }
   },[]);
 

@@ -4,7 +4,11 @@
   color: var(--primary-color);
   
 }
-
+.readMoreContainer button{
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
 .tagP{
   margin: 0;
   text-align: center;

@@ -1,14 +1,17 @@
-import UserGuideHeader from "../components/UserGuideComponent/UserGuideHeader";
-import UserGuideLetter from "../components/UserGuideComponent/UserGuideLetter";
-import CreateAccount from "../components/UserGuideComponent/CreateAccount";
-import Use from "../components/UserGuideComponent/Use";
-import UserGuideSearch from "../components/UserGuideComponent/UserGuideSearch";
-import EventCards from "../components/UserGuideComponent/EventCards";
-import Tags from "../components/UserGuideComponent/Tags";
-import FAQs from "../components/UserGuideComponent/FAQs";
+
 import style from "../assets/style/UserGuide.module.css";
 import useAxios from "../hooks/useAxiosGet";
 import { useLocation } from "react-router-dom";
+import { lazy } from "react";
+
+const UserGuideHeader = lazy(()=>import("../components/UserGuideComponent/UserGuideHeader"));
+const UserGuideLetter = lazy(()=>import("../components/UserGuideComponent/UserGuideLetter"));
+const CreateAccount = lazy(()=>import("../components/UserGuideComponent/CreateAccount"));
+const Use = lazy(()=>import("../components/UserGuideComponent/Use"));
+const UserGuideSearch = lazy(()=>import("../components/UserGuideComponent/UserGuideSearch"));
+const EventCards = lazy(()=>import("../components/UserGuideComponent/EventCards"));
+const Tags = lazy(()=>import("../components/UserGuideComponent/Tags"));
+const FAQs = lazy(()=>import("../components/UserGuideComponent/FAQs"));
 
 function UserGuidePage() {
   const url = `user_guides/web`;

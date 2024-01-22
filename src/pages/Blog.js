@@ -4,6 +4,7 @@ import useAxios from "../hooks/useAxiosGet";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { lazy, Suspense } from "react";
+
 const BlogHeader = lazy(() => import("../components/blog/BlogHeader"));
 const BlogLetter = lazy(() => import("../components/blog/BlogLetter"));
 const BlogCards = lazy(() => import("../components/blog/StatisticsSection"));

@@ -2,7 +2,9 @@
 .mainReachoutDiv{
   padding: 50px;
 }
-
+.rightReachout button{
+  margin-top: 20px;
+}
 .contactTitle{
   /* padding: 15px 10% !important; */
   padding: 0px 0px 40px 67px!important;

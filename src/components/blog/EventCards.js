@@ -2,7 +2,6 @@ import style from "../../assets/style/Blog.module.css";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 function EventCards({data,pathName , urlId}) {
-  console.log(data);
   const handleChangePage = () => {
     window.scrollTo(0, 0);
   };

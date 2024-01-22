@@ -4,7 +4,7 @@ import ReactHtmlParser from "html-react-parser";
 import Title from "../common/Title";
 
 function AboutParagraph({ aboutData }) {
-  const [t, i18n] = useTranslation();
+  const [ i18n] = useTranslation();
 
   return (
     <div className={`${style.aboutParagraph} col-lg-8`}>
