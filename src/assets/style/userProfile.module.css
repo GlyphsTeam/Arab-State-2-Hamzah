@@ -8,6 +8,9 @@
     max-height: 450px;
     height: 450px;
 }
+.changeForm button{
+    margin-top: 20px;
+}
 .imgActionContainer{
     height: 50px;
     position: relative;
@@ -91,8 +94,6 @@ margin-top: 80%; */
 
 } */
 .changeForm button:hover{
-    background-color: var(--white) !important;
-    color: var(--primary-color);
     border: 3px solid var(--tertiary-color);
 }
 .inputRow{

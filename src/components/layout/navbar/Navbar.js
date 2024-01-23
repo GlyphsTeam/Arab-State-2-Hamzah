@@ -101,7 +101,9 @@ function NavBar({ logoImage }) {
     pathName === "/profile" ||
     pathName === "/changepassword"||
     pathName === "/delete-account" || 
-    pathName.includes("/show-user-guide")
+    pathName.includes("/show-user-guide") ||
+    pathName === "/register" ||
+    pathName === "/forget-password"
   )
   {
     nav = "two"

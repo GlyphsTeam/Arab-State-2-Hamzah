@@ -4,6 +4,11 @@
   padding: 0px 3.6%;
   color: var(--primary-color);
 }
+.readMoreContainer button{
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
 .blogContainer {
   display: flex;
   justify-content: center;
@@ -565,6 +570,7 @@ transition: all 0.4s ease;
     overflow: hidden;
     margin: 0;
   }
+  
   .readMoreContainer {
     text-align: end;
     padding: 0px 13px;

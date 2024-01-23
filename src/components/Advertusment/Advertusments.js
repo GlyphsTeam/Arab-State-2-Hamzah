@@ -8,18 +8,18 @@ function Advertusments() {
     const [t] = useTranslation();
     const location = useLocation();
     const [adverShow, setAdverShow] = useState(true);
-    useEffect(()=>{
-        if(location.pathname==="/add-bussinse"){
+    useEffect(() => {
+        if (location.pathname === "/add-bussinse") {
             setAdverShow(false)
         }
-        else{
+        else {
             setAdverShow(true)
         }
-    },[location])
+    }, [location])
     return (
         <>
             {adverShow && <div className={style.containerAdver}>
-                <LazyLoadImage  src={Glyphs} alt="logo" className={style.logoGlyphs}/>
+                <LazyLoadImage src={Glyphs} alt="logo" className={style.logoGlyphs} />
                 <p className={style.adverPar}>
                     {t("For More Services Visit Our website")} : <a href="https://glyphsmarketing.com" target="_blank" rel="noreferrer">Visit</a>
                 </p>

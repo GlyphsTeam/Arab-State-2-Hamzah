@@ -46,7 +46,8 @@ function App() {
 
   const logoImage = Data?.data?.navbar?.logo;
   const authImage = authData?.data?.login_page?.image;
-
+  const logoWeb = Data?.data?.logo
+  console.log(" Data?.data>>>", Data?.data?.logo)
   const [baseURL, setBaseURL] = useState();
   useEffect(() => {
     OneSignal.init({
@@ -154,12 +155,12 @@ function App() {
                 <Route
                   path={`/delete-account`}
                   element={
-                    <DeleteAccountPage baseUrl={authAPI} logo={authImage} />
+                    <DeleteAccountPage baseUrl={authAPI} logo={logoWeb} />
                   }
                 />
                 <Route
                   path={`/changePassword`}
-                  element={<ChangePassword baseUrl={authAPI} logo={authImage} />}
+                  element={<ChangePassword baseUrl={authAPI} logo={logoWeb} />}
                 />
               </Route>
 
@@ -173,12 +174,12 @@ function App() {
               <Route
                 exact
                 path={`/Login`}
-                element={<Login baseURL={guestAPI} logo={authImage} />}
+                element={<Login baseURL={guestAPI} logo={logoWeb} />}
               />
               <Route
                 exact
                 path={`/Register`}
-                element={<Register baseURL={baseURL} logo={authImage} />}
+                element={<Register baseURL={baseURL} logo={logoWeb} />}
               />
               <Route
                 exact
@@ -200,7 +201,7 @@ function App() {
               <Route
                 exact
                 path={`/Forget-Password`}
-                element={<ForgetPassword baseURL={baseURL} logo={authImage} />}
+                element={<ForgetPassword baseURL={baseURL} logo={logoWeb} />}
               />
               <Route exact path={`/eula`} element={<EulaGeorgiaPage />} />
               <Route

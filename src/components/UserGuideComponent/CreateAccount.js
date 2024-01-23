@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Pagination from "./Pagination";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import ButtonThree from "../Buttons/ButtonThree";
 function CreateAccount({ userGuide , urlId }) {
   const [t, i18n] = useTranslation();
   const createAccountData = userGuide?.model;
@@ -70,7 +71,9 @@ function CreateAccount({ userGuide , urlId }) {
                 >
                   <div className={style.readMoreContainer}>
                     <small className={style.readMoreText}>
+                      <ButtonThree>
                       {t("Read More")}
+                      </ButtonThree>
                     </small>
                   </div>
                 </Link>

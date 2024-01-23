@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import style from "./components/login.module.css";
-import profileImg from "../../assets/Images/loginLogo.png";
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ButtonSeven from '../Buttons/ButtonSeven';
 const ForgetPassword = ({ baseURL, setShowForgetPass, setShowForgetOtp, logo }) => {
     const [t, i18n] = useTranslation();
     const [userEmail, setUserEmail] = useState('');
@@ -85,14 +85,9 @@ const ForgetPassword = ({ baseURL, setShowForgetPass, setShowForgetOtp, logo }) 
                         {showEmailWarn && <p className={style.contactValidation}>{errorMessage} </p>}
 
                         <div className="row">
-                            <button
-                                type='button'
-                                className={`mt-4 btn rounded-10 w-2 ${style.loginBtn}`}
-                                onClick={handelSendEmail}
-                                disabled={!isValidEmail}
-                            >
-                                {t('Confirm')}
-                            </button>
+                            <ButtonSeven handlerClick={handelSendEmail} buttonType="button">
+                            {t('Confirm')}
+                            </ButtonSeven>
                         </div>
 
                     </div>

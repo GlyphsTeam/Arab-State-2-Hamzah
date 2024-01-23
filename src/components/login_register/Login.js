@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import ButtonSeven from "../Buttons/ButtonSeven.js";
 function Login({ baseURL, logo }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -70,18 +71,18 @@ function Login({ baseURL, logo }) {
             <div className={`row w-100 m-auto ${style.profileCardSubDiv}`}>
               <div
                 className={`col-md-12 col-sm-12 col-lg-6 d-flex ${style.imgOrder}`}
-                >
+              >
                 <LazyLoadImage
                   src={logo}
                   alt="react logo"
                   className={style.loginImg}
-                  />
+                />
               </div>
               <div
                 className={`col-md-12 col-sm-12 col-lg-6 ${style.formOrder}`}
-                >
+              >
                 <form className={style.form}>
-                <h1>Login</h1>
+                  <h1>Login</h1>
                   <div className={`row mt-4 ${style.formRow}`}>
                     <label htmlFor="email" className={`col-2 `}>
                       <i className={`fas fa-envelope ${style.icon}`}></i>
@@ -155,12 +156,11 @@ function Login({ baseURL, logo }) {
                     </div>
                   </div>
                   <div className="row">
-                    <button
-                      className={`mt-4 btn rounded-10 w-10 ${style.loginBtn}`}
-                      onClick={handelLogin}
-                    >
-                      {t("login")}
-                    </button>
+                    <div className={style.loginButtSev}>
+                      <ButtonSeven handlerClick={handelLogin}>
+                        {t("login")}
+                      </ButtonSeven>
+                    </div>
                   </div>
                 </form>
                 <div className="row" hidden>

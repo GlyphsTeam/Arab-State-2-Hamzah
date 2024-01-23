@@ -6,7 +6,7 @@ import ReactHtmlParser from "html-react-parser";
 function BlogLetter({ Data }) {
   const [t] = useTranslation();
   const [expanded, setExpanded] = useState(false);
-  const blog = Data?.data?.main;
+  const blog = Data?.main;
   const toggleExpand = () => {
     setExpanded(!expanded);
   };

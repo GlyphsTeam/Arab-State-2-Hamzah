@@ -8,7 +8,8 @@ import { useLocation } from 'react-router-dom';
 
 import axios from "axios";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet';
+
 const LeftShowBlog = lazy(() => import("../components/showBlog/LeftShowBlog"));
 const Similar = lazy(() => import("../components/blog/Similar"));
 const ShowBlogParagraph = lazy(() => import("../components/showBlog/ShowBlogParagraph"));

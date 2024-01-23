@@ -1,9 +1,14 @@
 import LoginPage from '../components/login_register/Login';
-
-function Login({baseURL, logo}) {
+import { Helmet } from 'react-helmet'
+function Login({ baseURL, logo }) {
+  const titlePage = "Login";
   return (
     <>
-    <LoginPage baseURL = {baseURL} logo = {logo}/>
+    <Helmet>
+      <title>{titlePage}</title>
+      <meta name="description" content="Login Page"/>
+    </Helmet>
+      <LoginPage baseURL={baseURL} logo={logo} />
     </>
   )
 }

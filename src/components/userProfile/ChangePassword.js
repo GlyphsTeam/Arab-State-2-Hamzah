@@ -3,6 +3,7 @@ import style from "../../assets/style/userProfile.module.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import Alert from "../customAlert/Alert";
+import ButtonSeven from "../Buttons/ButtonSeven";
 const ChangePassword = ({baseUrl}) => {
   const token = localStorage.getItem("arab_user_token");
   const oldPasswordRef = useRef(null);
@@ -97,9 +98,10 @@ const ChangePassword = ({baseUrl}) => {
             Passwords do not match
           </div>
         )}
-        <button className={style.changeButton} onClick={changePasswordFunction}>
-          {t("Update")}
-        </button>
+        <ButtonSeven handlerClick={changePasswordFunction}>
+        {t("Update")}
+        </ButtonSeven>
+
       </form>
       {success ? (
         <Alert

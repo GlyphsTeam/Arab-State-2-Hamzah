@@ -13,6 +13,12 @@
     /* background-color: #C2DEF3; */
     /* z-index: 99; */
 }
+.loginBody button{
+    margin: 20px auto;
+}
+.loginButtSev button{
+    margin: 20px auto;
+}
 .registerForm{
      display: flex;
     flex-direction: column;

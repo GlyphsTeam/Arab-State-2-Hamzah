@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import UseFetchPost from "../../hooks/useFetchPost";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import ButtonSeven from "../Buttons/ButtonSeven";
 const Regester = ({baseURL, url,regesterUrl, logo}) => {
     const [t] = useTranslation();
  const navigate = useNavigate()
@@ -175,7 +176,10 @@ setShowTermsWarn(true);
                     </div>
 
                     <div className="row">
-                       <button className={`mt-4 btn rounded-10 w-10 ${style.loginBtn}`}   onClick={hendelRegester}> {t('Register')}</button>
+                        <ButtonSeven handlerClick={hendelRegester}>
+                        {t('Register')}
+                        </ButtonSeven>
+                       {/* <button className={`mt-4 btn rounded-10 w-10 ${style.loginBtn}`}   onClick={hendelRegester}> {t('Register')}</button> */}
 
                     </div>
 

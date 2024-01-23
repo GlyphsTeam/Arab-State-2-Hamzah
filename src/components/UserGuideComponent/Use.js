@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import { React, useState, useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import ButtonThree from "../Buttons/ButtonThree";
 function Use({ userGuide , urlId}) {
   const [t, i18n] = useTranslation();
 ;
@@ -59,7 +60,9 @@ function Use({ userGuide , urlId}) {
                     onClick={handleChangePage}
                   >
                     <small className={style.readMoreText}>
+                      <ButtonThree>
                       {t("Read More")}
+                      </ButtonThree>
                     </small>
                   </Link>
                 </div>
