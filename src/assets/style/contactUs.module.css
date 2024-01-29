@@ -2,6 +2,7 @@
 .mainReachoutDiv{
   padding: 50px;
 }
+
 .rightReachout button{
   margin-top: 20px;
 }
@@ -9,11 +10,8 @@
   /* padding: 15px 10% !important; */
   padding: 0px 0px 40px 67px!important;
 }
-
-.leftReachout{
-  /* display: flex; */
-  /* align-items: baseline; */
-  /* flex-direction: column; */
+.contactParagraph{
+  text-align: justify !important;
 }
 .leftImage{
   /* margin: 20px auto; */

@@ -1,5 +1,5 @@
-.showBlogContainer{
-    /* background: #C2DEF3; */
+.showBlogParagraphDiv p{
+    text-align: justify;
 }
 .showBlogImage{
     height: 60%;
