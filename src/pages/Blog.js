@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from '../redux/slices/login';
 import { setBlogData } from '../redux/Blog/blog';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
 
 const BlogHeader = lazy(() => import("../components/blog/BlogHeader"));
 const BlogLetter = lazy(() => import("../components/blog/BlogLetter"));
@@ -24,6 +25,7 @@ function BlogPage() {
   const url = `blogs/web`
   const urlpath = useLocation();
   const pathName = urlpath.pathname;
+  const { t } = useTranslation();
   const blogState = useSelector((state) => state.blog.blogData)
   let urlId;
   const titlePage = "Blog Page"
@@ -32,7 +34,7 @@ function BlogPage() {
     let cityIdUrl = '/0';
 
     const token = localStorage.getItem("arab_user_token")
-    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/en${cityIdUrl}`;
+    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/${t("en")}${cityIdUrl}`;
 
     if (blogState === null) {
       dispatch(setLoading(true));
@@ -54,7 +56,7 @@ function BlogPage() {
   useEffect(() => {
     getBlogData();
   }, []);
-  console.log("blogState>>>",blogState)
+  console.log("blogState>>>", blogState)
   return (
     <>
       <Helmet>

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setLoading } from '../redux/slices/login';
 import { setCityData } from '../redux/City/city';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
 
 const Banner = lazy(() => import("../components/common/banner/HeroBanner"));
 const StateDescription = lazy(() => import("../components/states/StateDescription"));
@@ -17,11 +18,12 @@ const Cities = () => {
   const titlePage = "Cities Page";
   const dispatch = useDispatch();
   const stateCity = useSelector((state) => state.city.cityData);
+  const { t } = useTranslation();
 
   const getCityData = async () => {
     const token = localStorage.getItem("arab_user_token");
     let cityIdUrl = '/0';
-    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/en${cityIdUrl}`;
+    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/${t("en")}${cityIdUrl}`;
 
 
     if (stateCity === null) {

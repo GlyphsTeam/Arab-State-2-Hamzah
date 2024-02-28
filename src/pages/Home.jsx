@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setHomeData } from '../redux/Home/home'
 import { setLoading } from '../redux/slices/login';
 import style from "../assets/style/homePage/home.module.scss";
+import { useTranslation } from "react-i18next";
 
 import { Helmet } from "react-helmet";
 const About = lazy(() => import("../components/home/about/AboutUs"));
@@ -13,16 +14,16 @@ const AllCategoryList = lazy(() => import("../components/home/category/AllCatego
 const CitySection = lazy(() => import("../components/multiCityComponent/citySection/CityList"));
 const BannerWInfo = lazy(() => import("../components/common/banner/BannerWInfo"));
 const SpinnerStatic = lazy(() => import("../components/common/Spinner"));
-
 function Home() {
   let urlId;
   const url = `home`;
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const homeRedux = useSelector((state) => state.home.homeData);
   const getHomeDate = async () => {
     let cityIdUrl = '/0';
     const token = localStorage.getItem("arab_user_token");
-    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/en${cityIdUrl}`;
+    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/${t("en")}${cityIdUrl}`;
     if (homeRedux === null) {
       dispatch(setLoading(true));
 
@@ -41,7 +42,9 @@ function Home() {
   }
   useEffect(() => {
     getHomeDate();
-  }, [])
+  }, []);
+
+  console.log("homeRedux>>>", homeRedux)
   return (
     <>
       <Helmet>

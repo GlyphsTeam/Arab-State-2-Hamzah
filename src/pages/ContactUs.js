@@ -4,12 +4,14 @@ import { setContactData } from '../redux/Contact/contact';
 import { useSelector, useDispatch } from 'react-redux';
 import { setLoading } from '../redux/slices/login';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
 
 const MainContact = lazy(() => import("../components/contactUs/MainContact"));
 const HeroBanner = lazy(() => import("../components/common/banner/HeroBanner"));
 const SpinnerStatic = lazy(() => import("../components/common/Spinner"));
 function ContactUs({ baseURL }) {
   let contactUrl = "contact-page";
+  const { t } = useTranslation();
 
   const titlePage = "Contact Us Page"
   const dispatch = useDispatch();
@@ -18,7 +20,7 @@ function ContactUs({ baseURL }) {
   const getContactData = async () => {
     const token = localStorage.getItem("arab_user_token");
     let cityIdUrl = '/0';
-    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/en${cityIdUrl}`;
+    const baseURL = `https://${process.env.REACT_APP_domain}/api/${process.env.REACT_APP_City}/${t("en")}${cityIdUrl}`;
 
     if (contactState === null) {
       dispatch(setLoading(true));
