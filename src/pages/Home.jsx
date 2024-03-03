@@ -14,6 +14,7 @@ const AllCategoryList = lazy(() => import("../components/home/category/AllCatego
 const CitySection = lazy(() => import("../components/multiCityComponent/citySection/CityList"));
 const BannerWInfo = lazy(() => import("../components/common/banner/BannerWInfo"));
 const SpinnerStatic = lazy(() => import("../components/common/Spinner"));
+const Adsens = lazy(()=>import("../components/Adsens/Adsens"))
 function Home() {
   let urlId;
   const url = `home`;
@@ -44,7 +45,6 @@ function Home() {
     getHomeDate();
   }, []);
 
-  console.log("homeRedux>>>", homeRedux)
   return (
     <>
       <Helmet>
@@ -66,6 +66,7 @@ function Home() {
         </div>
         <TryApp data={homeRedux?.try_app} />
         <EasySearch data={homeRedux?.easy_search} />
+        <Adsens dataAdSlot="7940489560"/>
       </Suspense>
     </>
   );
