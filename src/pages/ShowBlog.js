@@ -94,7 +94,6 @@ function ShowBlog() {
                 </div>
                 {showShareModal && <Share url={pathName} setShowShareModal={setShowShareModal} />}
 
-                <LazyLoadImage src={showBlogData?.image} className={style.showBlogImage} alt="showBlog" />
                 <p className={` ${style.showBlogParagraph} pt-3`}>
                   {showBlogData?.web_description && ReactHtmlParser(`${showBlogData?.web_description}`)}
                 </p>

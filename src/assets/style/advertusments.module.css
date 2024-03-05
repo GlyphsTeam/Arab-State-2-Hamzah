@@ -6,14 +6,36 @@
     height: fit-content !important;
     padding-bottom: 3px;
 }
+.containerAdver p{
+    height: fit-content !important;
+}
+.glyphsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+.glyphsContainer p {
+    margin-right: 20px;
+}
+.adverPar:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.adverPar img{
+    margin-bottom: 10px;
+}
 .adverPar a{
     text-decoration: underline;
     color: #2dcafb !important;
     font-weight: 600;
 }
 .containerAdver{
-    background-color: #141b2d;
     width: 100%;
+    background-color: #141b2d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,5 +44,22 @@
 }
 .logoGlyphs{
     width: 50px;
-    height: 50px;
+    height: 40px;
+}
+
+@media(max-width:450px){
+    .adverPar:first-child{
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+        
+    }
+  
+    .adverPar{
+        font-size: 12px;
+    }
+    .adverPar p{
+        font-size: 12px;
+
+    }
 }

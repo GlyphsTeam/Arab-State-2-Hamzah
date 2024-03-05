@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {  useEffect } from "react";
 import style from "../../../assets/style/homePage/tryApp.module.scss";
 import { useTranslation } from "react-i18next";
 import { motion, useAnimation } from "framer-motion";
@@ -36,7 +36,7 @@ useEffect(() => {
     animate={control}
   >
 
-      <div style={{backgroundImage: `url(${data?.image})`}} className={style.tryAppMainContainer}>
+      <div style={{backgroundImage: `url(${data?.image})`}} className={` ${style.tryAppMainContainer} `}>
       <div
         className={
           i18n.language === "en"

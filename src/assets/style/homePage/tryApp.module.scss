@@ -1,24 +1,45 @@
+@import "../_App.module.scss";
+ .tryAppMainContainer{
+  animation:1s ease-in FaBluetooth;
+  animation-timeline:view();
+  animation-range:entry;
+  animation-name:blurFadeIn;
+ }
+ @keyframes blurFadeIn{
+  0%{
+      transform:scale(2.5);
+      opacity: 0;
+      filter:blur(5px);
+  }
+  100%{
+      transform:scale(1);
+      opacity:1;
+      filter:blur(0px);
+
+
+  }
+}
 .tryAppMainContainer {
   width: 100%;
   margin: auto;
-  text-align:center;
   // border-radius: 25px;
   // background-image: url("../../Images//home/tryAppBackground.png");
   //  filter: brightness(70%);
   // background-repeat: no-repeat;
+  margin-top: 87px;
   padding-top: 60px;
   .tryAppContainer,
   .tryAppContainerAr {
     width: 100%;
     margin: auto;
-    padding-bottom: 100px;
-    margin-bottom: 25px;
+    padding-bottom: 105px;
+    // margin-bottom: 25px;
     background-position: bottom;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 42px;
 
     .tryAppSubDiv,
     .tryAppSubDivAr {
@@ -26,11 +47,11 @@
 
       color: white;
       .tryAppInfo {
-        padding: 8% 14%;
-        padding: 4% 9%;
+        // padding: 8% 14%;
+        // padding: 4% 9%;
         padding: 50px 20px;
         // display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
       }
       .tryAppInfoTitle {
         // margin: 0px 60px;
@@ -44,8 +65,7 @@
     }
     .tryAppParagraph {
       font-size: 24px;
-      margin-right: 0px;
-      margin-left: 30px;
+      margin-right: 171px;
       height: 84px;
       overflow: hidden;
     }
@@ -61,12 +81,11 @@
   
         .googlePlayContainer {
           margin: 10px 0;
-          background: var(--box-color);
-          
+          background: $box-color;
           padding: 11px;
           display: flex;
           align-items: center;
-          color: var(--tertiary-color);
+          color: $secondary-color;
           border-radius: 14px;
           cursor: pointer;
           i{
@@ -75,7 +94,7 @@
         }
 
         .googlePlayContainer:hover {
-          color: var(--primary-color);
+          color: $primary-color;
         }
 
 
@@ -103,11 +122,11 @@
       }
       .playStoreContainer {
         // background-color:  #01828F;
-        background: var(--box-color);
+        background: $box-color;
         padding: 11px;
         display: flex;
         align-items: center;
-        color: var(--tertiary-color);
+        color: $secondary-color;
         border-radius: 14px;
         i{
           font-size: 39px;
@@ -116,7 +135,7 @@
       }
 
       .playStoreContainer:hover {
-        color: var(--primary-color);
+        color: $primary-color;
       }
 
       .playStoreDiv{
@@ -141,8 +160,7 @@
       padding: 8px;
       border-radius: 7px;
       border: none;
-      background-color: var(--box-color);
-      
+      background-color: $box-color;
     }
     .subscribeBtnDiv {
       padding-top: 5px;
@@ -180,7 +198,7 @@
       padding: 8px;
       border-radius: 7px;
       border: none;
-      background-color: var(--box-color);
+      background-color: $box-color;
     }
     .subscribeBtnDiv {
       padding-top: 5px;
@@ -218,12 +236,7 @@
 .subscribeParagraphAr {
   text-align: right;
 }
-@media (max-width:480px){
-  .tryAppBtnDiv{
-    flex-direction: column !important;
 
-  }
-}
 @media (max-width: 767px) {
   .tryAppParagraph{
     padding: 10px;
@@ -257,7 +270,6 @@
     // background-image: url("../../images/HomePageImages/tryAppMobile.png") !important;
     // aspect-ratio: 5/6;
     background-size: cover;
-    
     border-radius: 10px;
     background-repeat: no-repeat;
     // .tryAppInfo {
@@ -283,7 +295,6 @@
   .tryAppSubDivAr {
     // background-image: url("../../images/HomePageImages/tryAppMobileAr.png") !important;
     background-size: cover;
-    
     border-radius: 10px;
     background-repeat: no-repeat;
     .tryAppInfo {
@@ -424,6 +435,9 @@
       display: flex;
       flex-direction: column !important;
     }
+  }
+  .tryAppMainContainer{
+    text-align:center !important;
   }
   .tryAppInfo {
     padding: 33px 1px !important;

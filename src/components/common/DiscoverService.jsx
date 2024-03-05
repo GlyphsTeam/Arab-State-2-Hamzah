@@ -2,6 +2,7 @@ import style from "../../assets/style/common/discoverService.module.scss";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ReactHtmlParser from "html-react-parser";
+import Title from "./Title";
 
 const DiscoverService = ({ data }) => {
 
@@ -10,18 +11,18 @@ const DiscoverService = ({ data }) => {
 
   return (
     <div className={style.discoverServiceContainer}>
-      <div
-        className={style.discoverServiceImageContainer}
-        style={{ backgroundImage: `url(${data?.image})` }}
-      ></div>
-      <div className={style.discoverServiceText}>
-        <h5>{data?.title}</h5>
-        <p>{data?.web_description && ReactHtmlParser(data?.web_description)}</p>
-        <Link to={process.env.REACT_APP_ABOUT_URL}>
-          <div className={i18n.language === "en" ? style.discoverServiceButton: style.discoverServiceButtonAr }>{t("Start Your Journey")}</div>
-        </Link>
-      </div>
+    <div
+      className={style.discoverServiceImageContainer}
+    ></div>
+    <div className={style.discoverServiceText}>
+      <Title data={data?.title} />
+      <p>{data?.web_description && ReactHtmlParser(data?.web_description)}</p>
+
+      <Link to="/User-Guide">
+        <div className={i18n.language === "en" ? style.discoverServiceButton : style.discoverServiceButtonAr}>{t("Start Your Journey")}</div>
+      </Link>
     </div>
+  </div>
   );
 };
 

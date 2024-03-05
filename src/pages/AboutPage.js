@@ -11,7 +11,6 @@ const AboutImage = lazy(() => import("../components/aboutUs/AboutImage"));
 const AboutParagraph = lazy(() => import("../components/aboutUs/AboutParagraph"));
 const UserAnalytics = lazy(() => import("../components/aboutUs/UserAnalytics"));
 const HeroBanner = lazy(() => import("../components/common/banner/HeroBanner"));
-const PlacesToVisitSection = lazy(() => import("../components/blog/PlacesToVisitSection"));
 const DiscoverService = lazy(() => import("../components/common/DiscoverService"));
 const SpinnerStatic = lazy(() => import("../components/common/Spinner"));
 function AboutPage() {
@@ -62,7 +61,7 @@ function AboutPage() {
           <UserAnalytics aboutData={aboutRedux?.statistics} />
           <DiscoverService data={aboutRedux?.our_services} />
           <div className="px-5">
-            <PlacesToVisitSection data={aboutRedux?.blogs} />
+            {/* <PlacesToVisitSection data={aboutRedux?.blogs} /> */}
           </div>
 
         </div>

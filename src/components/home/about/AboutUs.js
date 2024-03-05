@@ -12,7 +12,6 @@ function AboutUs({ data }) {
       {/* {aboutData?.slice(0,1).map((item, index) => ( */}
       <React.Fragment>
         <div className={style.leftAboutInfo}>
-          <p className={style.aboutUsSubTitle}>{data?.small_title}</p>
           <h1>{data?.title}</h1>
           <p>{data?.description && ReactHtmlParser(`${data?.description}`)}</p>
           {/* <p>{data?.description}</p> */}

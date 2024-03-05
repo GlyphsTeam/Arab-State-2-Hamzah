@@ -15,7 +15,6 @@ const BlogCards = lazy(() => import("../components/blog/StatisticsSection"));
 const PopularCards = lazy(() => import("../components/blog/PopularSection"));
 const BlogSearch = lazy(() => import("../components/blog/BlogSearch"));
 const EventCards = lazy(() => import("../components/blog/EventCards"));
-const Tags = lazy(() => import("../components/blog/Tags"));
 const PlacesToVisit = lazy(() => import("../components/blog/PlacesToVisitSection"));
 const SpinnerStatic = lazy(() => import("../components/common/Spinner"));
 
@@ -56,7 +55,6 @@ function BlogPage() {
   useEffect(() => {
     getBlogData();
   }, []);
-  console.log("blogState>>>", blogState)
   return (
     <>
       <Helmet>
@@ -102,7 +100,6 @@ function BlogPage() {
             <div className={`container`}>
               <div className={`pt-5`}>
                 <PlacesToVisit data={blogState?.visit} urlId={urlId} />
-                <Tags data={blogState?.tags} pathName={pathName} />
               </div>
             </div>
           </div>
