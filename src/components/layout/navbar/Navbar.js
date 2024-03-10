@@ -6,11 +6,14 @@ import Button from "../../common/Button";
 import NavSearch from "../navbar/NavSearch";
 import { useLocation } from "react-router-dom";
 import btnStyle from "../../../assets/style/common/button.module.scss";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useAxios from "../../../hooks/useAxiosGet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Advertusments from "../../Advertusment/Advertusments";
+import { MdApps } from 'react-icons/md';
+import { FaSignOutAlt, FaGlobe, FaRegUser, FaUser, FaBars  } from "react-icons/fa";
+
 function NavBar({ logoImage }) {
   const [showNavbar, setShowNavbar] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -97,24 +100,24 @@ function NavBar({ logoImage }) {
     }
   };
   var nav = "one";
-  if(
+  if (
     pathName === "/profile" ||
-    pathName === "/changepassword"||
-    pathName === "/delete-account" || 
+    pathName === "/changepassword" ||
+    pathName === "/delete-account" ||
     pathName.includes("/show-user-guide") ||
     pathName === "/register" ||
-    pathName === "/forget-password"
-  )
-  {
+    pathName === "/forget-password" ||
+    pathName ===  "/login"
+  ) {
     nav = "two"
   }
 
   return (
     <>
-    <Advertusments/>
+      <Advertusments />
       {!hideNavbar && (
         <header
-       className={`${nav === "one" ? style.headerContainer : style.headerContainer2
+          className={`${nav === "one" ? style.headerContainer : style.headerContainer2
             } ${navbar ? style.activeNav : ""} `}
         >
           <div className={i18n.language === "ar" ? style.logoDivAr : ""}>
@@ -169,7 +172,7 @@ function NavBar({ logoImage }) {
                   setStatesDropDown(!statesDropDown);
                 }}
               >
-                <i className={`fas fa-th ${style.stateIcon}`}></i>
+                <MdApps className={style.stateIcon} />
               </button>
 
               {statesDropDown && (
@@ -202,7 +205,7 @@ function NavBar({ logoImage }) {
                     urlChangeLang("ar");
                   }}
                 >
-                  <i className={`fas fa-globe ${style.languageIcon}`}></i> AR
+                  <FaGlobe className={style.languageIcon} /> AR
                 </button>
               )}
               {i18n.language === "ar" && (
@@ -215,7 +218,7 @@ function NavBar({ logoImage }) {
                     urlChangeLang("en");
                   }}
                 >
-                  <i className={`fas fa-globe ${style.languageIcon}`}></i> EN
+                  <FaGlobe className={style.languageIcon} /> EN
                 </button>
               )}
             </div>
@@ -227,7 +230,7 @@ function NavBar({ logoImage }) {
                     handleCloseModal={handleCloseModal}
                     btnInfo={
                       <div className={btnStyle.iconUserDiv}>
-                        <i className={`far fa-user  ${style.userIcon}`}></i>
+                        <FaRegUser className={style.userIcon} />
                       </div>
                     }
                   />
@@ -236,7 +239,8 @@ function NavBar({ logoImage }) {
                 <MenuDropDown
                   dropDownInfo={
                     <div className={btnStyle.userloggedinBtn}>
-                      <i className={`far fa-user  ${style.userIcon}`}></i>
+                      <FaRegUser className={style.userIcon} />
+
                       {initialState.username.split(" ")[0]}
                     </div>
                   }
@@ -247,7 +251,9 @@ function NavBar({ logoImage }) {
 
                       title: (
                         <div >
-                          <i className={`fas fa-user-circle ${style.navCutome}`}>{t("Profile")}</i>{" "}
+                          <FaUser className={style.navCutome} />
+                          <span className={style.proColor}>{t("Profile")}</span>
+
                         </div>
                       ),
                     },
@@ -255,7 +261,9 @@ function NavBar({ logoImage }) {
                       path: "/",
                       title: (
                         <div onClick={logout} >
-                          <i className={`fas fa-sign-out-alt ${style.navCutome}`}> {t("LogOut")} </i>{" "}
+                          <FaSignOutAlt className={style.navCutome} />
+
+                          <span className={style.proColor}>{t("LogOut")}{" "}</span>
                         </div>
                       ),
                     },
@@ -285,12 +293,12 @@ function NavBar({ logoImage }) {
                   disableScroll(!statesDropDown);
                 }}
               >
-                <i className={`fas fa-th ${style.stateIcon}`}></i>
+                <MdApps className={style.stateIcon} />
               </button>
             </div>
 
             <div className={`${style.burgerMenu}`} onClick={handleShowNavbar}>
-              <i className={`fas fa-bars`}></i>
+              <FaBars className={style.barNav}/>
             </div>
           </div>
           {showNavbar && (
@@ -336,9 +344,8 @@ function NavBar({ logoImage }) {
                             handleCloseModal={handleCloseModal}
                             btnInfo={
                               <div className={btnStyle.iconUserDiv}>
-                                <i
-                                  className={`far fa-user  ${style.userIcon}`}
-                                ></i>
+                                <FaRegUser className={style.userIcon} />
+
                               </div>
                             }
                           />
@@ -348,9 +355,8 @@ function NavBar({ logoImage }) {
                           handleCloseModal={handleCloseModal}
                           dropDownInfo={
                             <div className={btnStyle.userloggedinBtn}>
-                              <i
-                                className={`far fa-user  ${style.userIcon}`}
-                              ></i>
+                              <FaRegUser className={style.userIcon} />
+
                               {initialState.username.split(" ")[0]}
                             </div>
                           }
@@ -359,9 +365,11 @@ function NavBar({ logoImage }) {
                               path: "/Profile",
                               title: (
                                 <div>
-                                  <i className={`fas fa-user-circle ${style.navCutome}`}>
-                                    {t("Profile")}
-                                  </i>{" "}
+                                  <FaUser className={style.navCutome} />
+
+
+                                  <span className={style.proColor}>{t("Profile")}</span>
+                                  {" "}
                                 </div>
                               ),
                             },
@@ -369,9 +377,11 @@ function NavBar({ logoImage }) {
                               path: "/",
                               title: (
                                 <div onClick={logout}>
-                                  <i className={`fas fa-sign-out-alt ${style.navCutome}`}>
-                                    {t("LogOut")}
-                                  </i>
+                                  <FaSignOutAlt className={style.navCutome} />
+
+
+                                  {t("LogOut")}
+
                                 </div>
                               ),
                             },
@@ -390,9 +400,7 @@ function NavBar({ logoImage }) {
                             urlChangeLang("ar");
                           }}
                         >
-                          <i
-                            className={`fas fa-globe ${style.languageIcon}`}
-                          ></i>{" "}
+                          <FaGlobe className={style.languageIcon} />{" "}
                           AR
                         </button>
                       )}
@@ -406,9 +414,7 @@ function NavBar({ logoImage }) {
                             urlChangeLang("en");
                           }}
                         >
-                          <i
-                            className={`fas fa-globe ${style.languageIcon}`}
-                          ></i>{" "}
+                          <FaGlobe className={style.languageIcon} />{" "}
                           EN
                         </button>
                       )}
@@ -434,15 +440,15 @@ function NavBar({ logoImage }) {
                 >
                   {" "}
                   <div className={`${style.imageContainerSpan}`}>
-                  <LazyLoadImage
-                    className={`mt-3`}
-                    src={item.image}
-                    height={50}
-                    width={50}
-                    alt="img-countery"
-                  />{" "}
-                  <span style={{ fontSize: "11px", fontWeight: "bold", marginTop: '10px' }} >{item.title}</span >
-                   </div>
+                    <LazyLoadImage
+                      className={`mt-3`}
+                      src={item.image}
+                      height={50}
+                      width={50}
+                      alt="img-countery"
+                    />{" "}
+                    <span style={{ fontSize: "11px", fontWeight: "bold", marginTop: '10px' }} >{item.title}</span >
+                  </div>
                 </a>
               ))}
             </div>

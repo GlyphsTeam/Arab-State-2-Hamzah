@@ -1,40 +1,19 @@
-import React, {  useEffect } from "react";
 import style from "../../../assets/style/homePage/tryApp.module.scss";
 import { useTranslation } from "react-i18next";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { FaGooglePlay } from "react-icons/fa";
+import { IoLogoApple } from "react-icons/io";
+
 import ReactHtmlParser from "html-react-parser";
 
 function TryApp({ data }) {
   const { t, i18n } = useTranslation();
   
 
-  const boxVariant = {
-    visible: { opacity: 1, transition: { duration: 1.5 } },
-    hidden: { opacity: 0, },
-  };
 
-  const control = useAnimation();
-const [ref, inView] = useInView();
 
-useEffect(() => {
-  if (inView) {
-    control.start("visible");
-  } else {
-  
-          control.start("hidden");
-      
-  }
-}, [control, inView]);
 
   return (
-    <motion.div
-    className="box"
-    ref={ref}
-    variants={boxVariant}
-    initial="hidden"
-    animate={control}
-  >
+   
 
       <div style={{backgroundImage: `url(${data?.image})`}} className={` ${style.tryAppMainContainer} `}>
       <div
@@ -66,7 +45,7 @@ useEffect(() => {
                 // }
               >
                 <div className={style.googlePlayContainer}>
-                  <i className="fab fa-google-play"></i>
+                  <FaGooglePlay  className={style.tryIcon}/>
                   <div className={style.googlePlayDiv}>
                     <p>Available on the</p>
                     <p>Google Play</p>
@@ -80,7 +59,7 @@ useEffect(() => {
               >
 
                 <div className={style.playStoreContainer}>
-                <i className="fab fa-apple"></i>
+                <IoLogoApple className={style.tryIcon}/>
                   <div className={style.playStoreDiv}>
                     <p>Download on the</p>
                     <p>App Store</p>
@@ -94,7 +73,6 @@ useEffect(() => {
       </div>
     </div>
     
-      </motion.div>
   );
 }
 

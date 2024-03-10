@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ButtonSeven from '../Buttons/ButtonSeven';
+import { MdEmail } from "react-icons/md";
+
 const ForgetPassword = ({ baseURL, setShowForgetPass, setShowForgetOtp, logo }) => {
     const [t, i18n] = useTranslation();
     const [userEmail, setUserEmail] = useState('');
@@ -71,7 +73,7 @@ const ForgetPassword = ({ baseURL, setShowForgetPass, setShowForgetOtp, logo }) 
                     </div>
                     <div>
                         <div className={`row mt-4 ${style.formRow}`}>
-                            <label htmlFor="email" className={`col-2 `}><i className={`fas fa-envelope ${style.icon}`}></i></label>
+                            <label htmlFor="email" className={`col-2 `}><MdEmail className={style.icon}/></label>
                             <input
                                 className={`col-10 ${style.formControl}`}
                                 id="email"

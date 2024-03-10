@@ -49,7 +49,6 @@
     height: 100% !important;
   }
   .cardBody:hover .cardListTitle{
-    background: none;
     color: var(--white);
     transition: 1s;
     box-shadow: none !important;

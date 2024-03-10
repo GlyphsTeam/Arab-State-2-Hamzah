@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "../../assets/style/common/scrollToTop.module.scss";
+import { MdKeyboardArrowUp } from "react-icons/md";
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +40,7 @@ function ScrollToTopButton() {
           onClick={scrollToTop}
         >
           <div className={style.arrowDiv}>
-            <i className="fas fa-chevron-up"></i>
+          <MdKeyboardArrowUp />
           </div>
         </div>
       )}

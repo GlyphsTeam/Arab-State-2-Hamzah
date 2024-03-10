@@ -78,6 +78,9 @@
         margin: 0px 8px 0px 8px;
 
       }
+      .tryIcon{
+        font-size:50px;
+      }
   
         .googlePlayContainer {
           margin: 10px 0;
@@ -583,4 +586,10 @@
   font-size: 30px;
 }
 }
+}
+@media (max-width:500px){
+  .tryIcon{
+    font-size:20px !important;
+    margin:0px !important;
+  }
 }

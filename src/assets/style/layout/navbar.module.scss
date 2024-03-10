@@ -2,14 +2,28 @@
    height: 60px;
 
 }
+.searchIcon{
+  font-size:40px !important;
+  cursor: pointer;
+}
 .navCutome{
   color:var(--primary-color) !important;
 }
 .linkColor{
   color: var(--white) !important;
 }
+.barNav{
+  color: #fff !important;
+}
 .linkColor:hover{
   color: var(--secondary2-color) !important;
+}
+.searchIcon{
+  color:white;
+}
+.proColor{
+  color:var(--primary-color);
+
 }
 
 .profileDropdown{

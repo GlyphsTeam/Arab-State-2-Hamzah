@@ -3,6 +3,10 @@ import style from "../../assets/style/about/userAnalytics.module.scss";
 import Slider from "react-slick";
 import {  useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { MdBusinessCenter } from "react-icons/md";
+import { FaUsers } from "react-icons/fa";
+import { HiDevicePhoneMobile } from "react-icons/hi2";
+
 const UserAnalytics = ({ aboutData }) => {
 
   const settings = {
@@ -69,19 +73,19 @@ const UserAnalytics = ({ aboutData }) => {
         >
           <div className={style.userAnalyticsText}>
             <div className={style.userAnalyticsCard}>
-              <i className={aboutData?.icon_businesses}></i>
+              <MdBusinessCenter/>
               <p className={style.parg}>{aboutData?.businesses}</p>
               <h5 className={style.titleCard}>{aboutData?.title_businesses}</h5>
             </div>
 
             <div className={style.userAnalyticsCard}>
-              <i className={aboutData?.icon_users}></i>
+              <FaUsers/>
               <p className={style.parg}>{aboutData?.users}</p>
               <h5 className={style.titleCard}>{aboutData?.title_users}</h5>
             </div>
 
             <div className={style.userAnalyticsCard}>
-              <i className={aboutData?.icon_verified_users}></i>
+              <HiDevicePhoneMobile/>
               <p className={style.parg}>{aboutData?.verified_users}</p>
               <h5 className={style.titleCard}>{aboutData?.title_verified_users}</h5>
             </div>
@@ -91,18 +95,18 @@ const UserAnalytics = ({ aboutData }) => {
             <Slider {...settings}>
               {/* {userAnalyticsDataArr?.map((item, index) => ( */}
               <div className={style.userAnalyticsCard}>
-                <i className={aboutData?.icon_businesses}></i>
+                <MdBusinessCenter/>
                 <p className={style.parg}>{aboutData?.businesses}</p>
                 <h5 className={style.titleCard}>{aboutData?.title_businesses}</h5>
               </div>
               <div className={style.userAnalyticsCard}>
-                <i className={aboutData?.icon_users}></i>
+                <FaUsers/>
                 <p className={style.parg}>{aboutData?.users}</p>
                 <h5 className={style.titleCard}>{aboutData?.title_users}</h5>
               </div>
 
               <div className={style.userAnalyticsCard}>
-                <i className={aboutData?.icon_verified_users}></i>
+                <HiDevicePhoneMobile/>
                 <p className={style.parg}>{aboutData?.verified_users}</p>
                 <h5 className={style.titleCard}> {aboutData?.title_verified_users}</h5>
               </div>

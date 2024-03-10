@@ -4,6 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SubscribeFooter from "./SubscribeFooter";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { IoLogoYoutube } from "react-icons/io";
+import { CgInstagram } from "react-icons/cg";
+import { FaFacebook, FaTiktok, FaTwitter, FaPinterest } from "react-icons/fa";
+
 function Footer({logoImage}) {
   const location = useLocation();
   const [t] = useTranslation();
@@ -17,7 +21,24 @@ function Footer({logoImage}) {
     location.pathname.toLocaleLowerCase() === "/privacy-policy" ||
     location.pathname.toLocaleLowerCase()=== "/terms-conditions" ||
     location.pathname.toLocaleLowerCase() === "/eula";
-
+    const SocialMediaIcon = ({ type }) => {
+      switch (type) {
+        case "youtube":
+          return <IoLogoYoutube />;
+        case "instagram":
+          return <CgInstagram />;
+        case "facebook":
+          return <FaFacebook />;
+        case "tiktok":
+          return <FaTiktok />;
+        case "twitter":
+          return <FaTwitter />;
+        case "pinterest":
+          return <FaPinterest />;
+        default:
+          return <></>;
+      }
+    };
   return (
     !hideFooter && (
     <div className={`${style.footer}`}>
@@ -46,12 +67,11 @@ function Footer({logoImage}) {
               </div>
             </div>
             <div className={style.footerIcon}>
-              {footerData?.social_media?.map((item, index) => (
-              <a href={item?.url} target="_blank" key={index}>
-                {" "}
-                <i className={item?.icon}></i>
-              </a>
-              ))}
+            {footerData?.social_media?.map((item, index) => (
+                  <Link to={item?.url} target="_blank" key={index}>
+                    <SocialMediaIcon type={item?.type} />
+                  </Link>
+                ))}
             </div>
             <div className={style.subscribeParagraph}>
               <p>

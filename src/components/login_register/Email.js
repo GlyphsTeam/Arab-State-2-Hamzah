@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import style from "./components/login.module.css";
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
+import { MdEmail } from "react-icons/md";
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ButtonSeven from '../Buttons/ButtonSeven';
 const Email = ({ baseURL, setShowEmail, logo, setShowRegister }) => {
@@ -65,7 +67,7 @@ const Email = ({ baseURL, setShowEmail, logo, setShowRegister }) => {
                     </div>
                     <div>
                         <div className={`row mt-4 ${style.formRow}`}>
-                            <label htmlFor="email" className={`col-2 `}><i className={`fas fa-envelope ${style.icon}`}></i></label>
+                            <label htmlFor="email" className={`col-2 `}><MdEmail className={style.icon}/></label>
                             <input
                                 className={`col-10 ${style.formControl}`}
                                 id="email"
